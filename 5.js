@@ -7,7 +7,10 @@ function boxWithSteps(boxes, steps, direction) {
                 }
                 boxes[i] = boxes[i + 1]
             } else {
-
+                if (boxes[i] === 0) {
+                    boxes[i] = boxes[boxes.length - 1]
+                }
+                boxes[i+1] = boxes[i]
             }
         }
     }
